@@ -29,6 +29,13 @@ sub_total = gets.chomp.to_f
 pst2 = sub_total*PST_RATE
 gst2 = sub_total*GST_RATE
 grand_total2 = sub_total + pst2 + gst2
+if grand_total2 <= 5
+    puts "Pocket Change"
+elsif grand_total2 > 5 && grand_total2 < 20
+    puts "Wallet Time"
+else
+    puts "Charge It!"
+end
 puts "Subtotal: $#{sub_total}"
 puts "PST: $#{pst2} - #{PST_RATE}"
 puts "GST: $#{gst2} - #{GST_RATE}"
